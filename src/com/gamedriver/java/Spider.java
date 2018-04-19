@@ -3,6 +3,8 @@ package com.gamedriver.java;
 // Author: Weishu Tan (cosci 290 group 4)
 // Manager: Christian Castillo
 
+import com.gamedriver.java.utilities.RandomNumber;
+
 public class Spider {
 
     private int health;
@@ -10,8 +12,8 @@ public class Spider {
     private int defense;
 
     public Spider () {
-        this.health = 12 + (int)(Math.random() * (25 - 12));
-        this.attack = 5 + (int)(Math.random() * (10 - 5));
+        this.health = RandomNumber.rNG(25, 1);
+        this.attack = RandomNumber.rNG(10, 5);
         this.defense = 5;
     }
 

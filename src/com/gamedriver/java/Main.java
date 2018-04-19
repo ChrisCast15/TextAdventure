@@ -1,3 +1,10 @@
+/*
+    Author Christian Castillo
+    Co Sci 290
+
+
+*/
+
 package com.gamedriver.java;
 
 import com.gamedriver.java.utilities.Splash;
@@ -8,13 +15,13 @@ public class Main {
 
     public static void main(String[] args) {
         //variables with blank placeholders
-        String name = " ";
-        String planet = " ";
-        String color = " ";
-        int age = 0;
-        int RngSlot = 10; //used for player influenced RNG
-        int PIRng = 1 + (int) (Math.random() * (RngSlot - 1)); //PLayer Influenced RNG
-        int RNG = 1 + (int) (Math.random() * (25 - 1)); //RNG, outputs 1 - 25
+        String name;
+        String planet;
+        String color;
+        int age;
+        //int RngSlot = 10; //used for player influenced RNG
+        //int PIRng = 1 + (int) (Math.random() * (RngSlot - 1)); //PLayer Influenced RNG
+        //int RNG = 1 + (int) (Math.random() * (25 - 1)); //RNG, outputs 1 - 25
 
 
         //allowing user input
