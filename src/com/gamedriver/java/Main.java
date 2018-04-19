@@ -15,7 +15,8 @@ public class Main {
 
     public static void main(String[] args) {
         //variables with blank placeholders
-        String name;
+
+        Player player = new Player();
         String planet;
         String color;
         int age;
@@ -44,14 +45,14 @@ public class Main {
                 + "greets you.\n");
         //User is asked a set of questions
         System.out.println("\"Hey there! Welcome to Olympus Mons Research base. What is your name?\"");
-        name = input.next();
+        player.setName(input.nextLine());
 
-        System.out.println("\"So it's " + name + "? That's a nice name! You must be the new recruit.\n"
+        System.out.println("\"So it's " + player.getName() + "? That's a nice name! You must be the new recruit.\n"
                 + "Let me fill out your TAGcard for you. What planet were you born on?\"");
         planet = input.next();
 
         System.out.println("\"Oh, you're from " + planet + "? I've got a cousin who lives there!"
-                + "\nHow old are you in " + planet + " years, " + name + "?\"");
+                + "\nHow old are you in " + planet + " years, " + player.getName() + "?\"");
         age = input.nextInt();
 
         System.out.println("\"" + age + "? That's about " + (age * 7) + " cycles here on Mars.\n"

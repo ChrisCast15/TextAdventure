@@ -23,7 +23,7 @@ public class SaveGame {
 
             bw.write(content);
 
-            System.out.println("Game Saved Succesfully!");
+            System.out.println("Game Saved Successfully!");
 
         } catch (IOException e) {
 
@@ -32,5 +32,6 @@ public class SaveGame {
         }
 
     }
+
 
 }
