@@ -16,5 +16,15 @@ public class Player {
     public String getName() {
         return this.name;
     }
+    public String getPlanet() {
+        return this.name;
+    }
+
+    public String toSave() {
+        String saveData =
+                "NAME: " + this.name +
+                        "\n Planet: " + this.planet;
+        return saveData;
+    }
 
 }

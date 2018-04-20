@@ -6,20 +6,22 @@
 
 package com.gamedriver.java.utilities;
 
+import com.gamedriver.java.Player;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class SaveGame {
 
-    public static void save(int fileNumber) {
+    public static void save(int fileNumber, Player player) {
 
 
         String fileName = "SaveData" + fileNumber + ".txt";
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName))) {
 
-            String content = "Player Data";
+            String content = player.toSave();
 
             bw.write(content);
 

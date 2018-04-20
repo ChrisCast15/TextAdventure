@@ -7,6 +7,7 @@
 
 package com.gamedriver.java;
 
+import com.gamedriver.java.utilities.SaveGame;
 import com.gamedriver.java.utilities.Splash;
 
 import java.util.Scanner;
@@ -17,7 +18,6 @@ public class Main {
         //variables with blank placeholders
 
         Player player = new Player();
-        String planet;
         String color;
         int age;
         //int RngSlot = 10; //used for player influenced RNG
@@ -49,10 +49,10 @@ public class Main {
 
         System.out.println("\"So it's " + player.getName() + "? That's a nice name! You must be the new recruit.\n"
                 + "Let me fill out your TAGcard for you. What planet were you born on?\"");
-        planet = input.next();
+        player.setPlanet(input.nextLine());
 
-        System.out.println("\"Oh, you're from " + planet + "? I've got a cousin who lives there!"
-                + "\nHow old are you in " + planet + " years, " + player.getName() + "?\"");
+        System.out.println("\"Oh, you're from " + player.getPlanet() + "? I've got a cousin who lives there!"
+                + "\nHow old are you in " + player.getPlanet() + " years, " + player.getName() + "?\"");
         age = input.nextInt();
 
         System.out.println("\"" + age + "? That's about " + (age * 7) + " cycles here on Mars.\n"
@@ -88,6 +88,8 @@ public class Main {
 
         //get spider health from class
 
+        SaveGame save = new SaveGame();
+        save.save(1, player);
 
         //Game over Screen
         splash.printGameOver();
