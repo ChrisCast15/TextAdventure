@@ -14,15 +14,18 @@ public class InputHelper {
 
     //asks a prompt and waits for input
     public static int getInt(String prompt) {
+
+        int input = 0;
         try {
             System.out.print(prompt);
             Scanner scanner = new Scanner(System.in);
-            return scanner.nextInt();
+            input = scanner.nextInt();
+
         } catch (InputMismatchException e) {
             System.out.println("Please input an integer!");
-            InputHelper.getInt(prompt)
+            InputHelper.getInt(prompt);
         }
-
+        return input;
     }
 
 
