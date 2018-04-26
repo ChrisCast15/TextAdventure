@@ -31,7 +31,7 @@ public class MapArray{
     
   }
 public static int rNG(){
-  int rNum = (int)(Math.random() * 100);
+  int rNum = (int)(Math.random() * 25);
   return rNum;
 }
   
