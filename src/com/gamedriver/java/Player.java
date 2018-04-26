@@ -17,7 +17,7 @@ public class Player {
         return this.name;
     }
     public String getPlanet() {
-        return this.name;
+        return this.planet;
     }
 
     public String toSave() {

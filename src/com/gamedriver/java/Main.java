@@ -1,5 +1,5 @@
 /*
-    Author Christian Castillo
+    Authors Christian Castillo
     Co Sci 290
 
 
@@ -9,7 +9,6 @@ package com.gamedriver.java;
 
 import com.gamedriver.java.utilities.SaveGame;
 import com.gamedriver.java.utilities.Splash;
-
 import java.util.Scanner;
 
 public class Main {
@@ -84,7 +83,7 @@ public class Main {
         Spider[] spider = new Spider[2];
         Spider spider1 = new Spider();
         spider[0] = spider1;
-        System.out.print("Spider health: " + spider[0].getHealth());
+        System.out.println("Spider health: " + spider[0].getHealth());
 
         //get spider health from class
 
