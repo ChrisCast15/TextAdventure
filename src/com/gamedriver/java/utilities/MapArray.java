@@ -1,3 +1,5 @@
+/* commented out until we get it working
+
 public class MapArray{
 
 
@@ -44,3 +46,4 @@ public static int rNG(){
 }
   
 }
+*/
