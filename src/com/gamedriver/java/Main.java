@@ -1,5 +1,4 @@
 /*
-/*
     Authors Christian Castillo
     Steven Lemos
     Hai Nguyen
@@ -13,18 +12,13 @@ package com.gamedriver.java;
 import com.gamedriver.java.utilities.InputHelper;
 import com.gamedriver.java.utilities.SaveGame;
 import com.gamedriver.java.utilities.Splash;
-import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        //variables with blank placeholders
 
 //      creates an instance of the Player Class
         Player player = new Player();
-
-        //allowing user input
-        Scanner input = new Scanner(System.in);
 
         Splash.printTitle();
 
@@ -60,34 +54,8 @@ public class Main {
                 + "What's your favorite color?\"  "));
 
         System.out.println("\"Lucky you, I've got a " + player.getColor() + " labsuit here for you!\"  ");
-        //RNG Event
-    /*
-    System.out.println("How many plasma rounds do you want to shoot at the Wall Crawler?");
-    RngSlot = input.nextInt();
-    if(RNG > 18){
-      System.out.print("You were attacked and killed before you can fire a single round.\n"
-                      + "GAME OVER");
-        }
-    else{
-      if(PIRng > (RngSlot / 3)){
-        System.out.print("You killed the beast!\n");
-      }
-      else{
-        System.out.print("You wounded the animal. Its angrier than ever! RUN!!!");
-      }
-    }
-  // end of RNG event
-  */
 
-        //fight spider
-        int playerHealth = 100;
-        Spider[] spider = new Spider[2];
-        Spider spider1 = new Spider();
-        spider[0] = spider1;
-        System.out.println("Spider health: " + spider[0].getHealth());
 
-        //get spider health from class
-        
         SaveGame.save(1, player);
 
         //Game over Screen
