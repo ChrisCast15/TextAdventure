@@ -1,21 +1,21 @@
-/*
+package com.gamedriver.java.utilities;/*
   
     Author: Steven Lemos
     
     This Utility Class houses all the custom methods that
     support my text adventure.support
-    
+
 */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
 
-public class ReadFile{
+public class ReadTextFile{
   /*
-    This methond oens a file and prints out each line.
+    This method opens a file and prints out each line.
   */
-  public void printLine(String filename) throws Exception {
+  public static void printLine(String filename) throws Exception {
     
     String currentLine; //hold the current line being read in file
     
@@ -25,7 +25,7 @@ public class ReadFile{
       //read each line in the file until the EOF
       while((currentLine = br.readLine()) != null){
         System.out.println(currentLine);
-        Thread.sleep(4000);
+        Thread.sleep(800);
         
       } 
      //if there is no file to open, the exception will be caught 

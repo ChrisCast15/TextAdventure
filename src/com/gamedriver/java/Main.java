@@ -9,13 +9,15 @@
 
 package com.gamedriver.java;
 
+//import com.gamedriver.java.utilities.GameMap;
 import com.gamedriver.java.utilities.InputHelper;
+import com.gamedriver.java.utilities.ReadTextFile;
 import com.gamedriver.java.utilities.SaveGame;
 import com.gamedriver.java.utilities.Splash;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
 //      creates an instance of the Player Class
         Player player = new Player();
@@ -27,16 +29,20 @@ public class Main {
 
         //lets add a "Press Enter" here to start before we start the story!
 
+//        GameMap gameMap = new GameMap();
 
-        System.out.print("You have left your homeworld to go to Mars, one of the few planets \n"
-                + "offering steady employment in this solar system.\n"
-                + "You've taken on a job offer from the first, and so far only\n"
-                + "corporation on martian soil. Interplanetary Corps has had a monopoly\n"
-                + "on martian mineral rights since they were the first to succesfully"
-                + "colonize the iron-rich lands.\n"
-                + "Your interplanetary shuttle has just touched down and you make your \n"
-                + "way to the reception desk. The person behind the elegant steel desk \n"
-                + "greets you.\n");
+        ReadTextFile.printLine("Story.txt");
+
+
+//        System.out.print("You have left your homeworld to go to Mars, one of the few planets \n"
+//                + "offering steady employment in this solar system.\n"
+//                + "You've taken on a job offer from the first, and so far only\n"
+//                + "corporation on martian soil. Interplanetary Corps has had a monopoly\n"
+//                + "on martian mineral rights since they were the first to succesfully"
+//                + "colonize the iron-rich lands.\n"
+//                + "Your interplanetary shuttle has just touched down and you make your \n"
+//                + "way to the reception desk. The person behind the elegant steel desk \n"
+//                + "greets you.\n");
         //User is asked a set of questions
 //        System.out.println("\"Hey there! Welcome to Olympus Mons Research base. What is your name?\"");
 //        player.setName(input.nextLine());

@@ -15,7 +15,11 @@ public class InputHelper {
     //asks a prompt and waits for input. Returns int data type
     public static int getInt(String prompt) {
 
-        int input = 2;
+//        BUG: when catch is activated,
+//        will only return whatever input
+//        was initialized to.
+        int input = 0;
+
         try {
             System.out.print(prompt);
             Scanner scanner = new Scanner(System.in);
