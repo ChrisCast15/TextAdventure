@@ -15,7 +15,7 @@ public class ReadTextFile{
   /*
     This method opens a file and prints out each line.
   */
-  public static void printLine(String filename) throws Exception {
+  public static void printLine(String filename) {
     
     String currentLine; //hold the current line being read in file
     
@@ -25,7 +25,7 @@ public class ReadTextFile{
       //read each line in the file until the EOF
       while((currentLine = br.readLine()) != null){
         System.out.println(currentLine);
-        Thread.sleep(800);
+//        Thread.sleep(800);
         
       } 
      //if there is no file to open, the exception will be caught 
