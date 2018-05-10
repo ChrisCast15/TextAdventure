@@ -1,5 +1,8 @@
 package com.gamedriver.java;
 
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 public class Player {
 
 
@@ -43,10 +46,17 @@ public class Player {
         return this.color;
     }
 
+    Date now = new Date();
+
+
+
     //call on this to write to gamesave.txt
     public String toSave() {
         return "NAME: " + this.name +
-                "\n Planet: " + this.planet;
+                "\n Planet: " + this.planet +
+                "\n Age: " + this.age +
+                "\n Color: " + this.color +
+                "\n Time of Save: " + now;
     }
 
 }
