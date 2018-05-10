@@ -15,6 +15,10 @@ import com.gamedriver.java.utilities.ReadTextFile;
 import com.gamedriver.java.utilities.SaveGame;
 import com.gamedriver.java.utilities.Splash;
 
+/**
+ * This is the Main class. our program starts here!
+ */
+
 public class Main {
 
     public static void main(String[] args) {
@@ -22,16 +26,27 @@ public class Main {
 //      creates an instance of the Player Class
         Player player = new Player();
 
+        /**
+         * Creates an instance of the Player class.
+         * This is YOU! our protagonist!
+         */
+
         Splash.printTitle();
 
-        //Start Story
-        System.out.print(" \n \n \n \n"); // adds lines to separate introduction from title
-
-        //lets add a "Press Enter" here to start before we start the story!
-
-//        GameMap gameMap = new GameMap();
+        /**
+         * Our title splash is generated and a few lines are added
+         * to separate it from the story
+         */
 
         ReadTextFile.printLine("Story.txt");
+
+        /**
+         * This displays our story with the help of a filereader
+         * to read our story from a txt file!
+         *
+         * Next, a receptionist welcomes you and asks a few questions for information about the player
+         * They want to know Name, home planet, age, and favorite color!
+         */
 
 //      Here is where we start getting the player's information
         player.setName(InputHelper.getInput("\"Hey there! Welcome to Olympus Mons Research base. What is your name?\"  "));
@@ -49,6 +64,10 @@ public class Main {
 
 
         SaveGame.save(1, player);
+
+        /**
+         * this saves information about the player!
+         */
 
         //Game over Screen
         Splash.printGameOver();
