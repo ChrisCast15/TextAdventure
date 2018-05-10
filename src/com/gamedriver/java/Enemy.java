@@ -1,12 +1,17 @@
 package com.gamedriver.java;
 
 public class Enemy {
-    
-    private String type = "";
+
+    private String type;
+    private int health;
     private int attack;
     private int defense;
 
-    public Enemy(String type, int attack, int defense) {
+    Enemy(String type, int health, int attack, int defense) {
+        this.type = type;
+        this.health = health;
+        this.attack = attack;
+        this.defense = defense;
     }
 
     public String getType() {
@@ -15,6 +20,14 @@ public class Enemy {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public int getAttack() {
@@ -37,6 +50,7 @@ public class Enemy {
     public String toString() {
         return "Enemy{" +
                 "type='" + type + '\'' +
+                ", health=" + health +
                 ", attack=" + attack +
                 ", defense=" + defense +
                 '}';
