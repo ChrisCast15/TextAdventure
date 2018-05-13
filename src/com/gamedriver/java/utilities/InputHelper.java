@@ -5,19 +5,24 @@ import java.util.Scanner;
 
 public class InputHelper {
 
-    //asks a prompt and awaits input. returns String object.
+    /**
+     *
+      * @param prompt asks a question
+     * @return returns the answer to the question
+     */
     public static String getInput(String prompt) {
         System.out.print(prompt);
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
 
-    //asks a prompt and waits for input. Returns int data type
+    /**
+     *
+      * @param prompt asks a question
+     * @return user's response to the question
+     */
     public static int getInt(String prompt) {
 
-//        BUG: when catch is activated,
-//        will only return whatever input
-//        was initialized to.
         int input;
         try {
             System.out.print(prompt);
@@ -25,7 +30,10 @@ public class InputHelper {
             input = scanner.nextInt();
             return input;
 
-//            When an incompatible is input, will ask again
+            /**
+             * when user's response is anything but an int,
+             * we will ask one more time
+             */
         } catch (InputMismatchException e) {
             System.out.println("Please input an integer!");
 
