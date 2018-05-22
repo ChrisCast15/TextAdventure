@@ -11,7 +11,7 @@ public class InputHelper {
      * @return returns the answer to the question
      */
     public static String getInput(String prompt) {
-        System.out.print(prompt);
+        System.out.print(prompt + "\n> ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }

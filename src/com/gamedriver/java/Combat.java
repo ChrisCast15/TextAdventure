@@ -18,7 +18,7 @@ public class Combat {
             if (enemy.getHealth() <= 0) {
                 System.out.println("The slain enemy is slumped up against a wall");
             } else {
-                System.out.println("The " + enemy.getType() + "is getting ready to attack!");
+                System.out.println("The " + enemy.getType() + " is getting ready to attack!");
                 System.out.println(enemy.toString());
                 playerChoice = InputHelper.getInput("What do you want to do? (Attack/Defend)").toLowerCase();
                 playChoice = playerChoice.charAt(0);
@@ -52,8 +52,9 @@ public class Combat {
                 //enemy attacks
                 if (enemy.getHealth() > 0) {
                     System.out.println("The " + enemy.getType() + " attacks!");
-
-                }//end enemy attack
+                } else {
+                    System.out.println("You defeated the " + enemy.getType() + "!");//end enemy attack
+                }
 
         }//combat loop
     }//end fight method
