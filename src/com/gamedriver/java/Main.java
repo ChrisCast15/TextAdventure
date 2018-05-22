@@ -17,10 +17,14 @@ import com.gamedriver.java.utilities.*;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    //      creates an instance of the Player Class
+    static Player player = new Player();
 
-//      creates an instance of the Player Class
-        Player player = new Player();
+    public static void main(String[] args) {
+
+
+
+        PuzzleRoom1.initiateRoom();
 
         Splash.printTitle();
 
@@ -41,6 +45,8 @@ public class Main {
         System.out.println("\"Lucky you, I've got a " + player.getColor() + " labsuit here for you!\"  ");
 
         ReadTextFile.printLine("Story2.txt");
+
+
 
         SaveGame.save(1, player);
 

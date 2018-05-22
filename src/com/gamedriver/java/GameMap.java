@@ -2,11 +2,12 @@ package com.gamedriver.java;
 
 public class GameMap {
 
-    int[][] grid = new int[5][5];
+    int[][] grid = new int[4][4];
+    //create a 4x4 grid
 
-    public static void location(int x, int y) {
+    //set our starting coordinates
 
 
     }
 
-}
+

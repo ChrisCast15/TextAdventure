@@ -56,11 +56,9 @@ public class Enemy {
 
     @Override
     public String toString() {
-        return "Enemy{" +
-                "type='" + type + '\'' +
-                ", health=" + health +
-                ", attack=" + attack +
-                ", defense=" + defense +
-                '}';
+        return "Enemy " + type +
+                ": HP= " + health +
+                ", ATK= " + attack +
+                ", DEF=" + defense;
     }
 }

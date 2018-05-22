@@ -10,6 +10,9 @@ public class Player {
     private String planet;
     private int age;
     private String color;
+    private int health = 30;
+    private int attack = 5;
+    private int defense = 3;
 
 
 //    Methods for setting player information
@@ -28,6 +31,15 @@ public class Player {
     void setColor(String str) {
         this.color = str;
     }
+    void setHealth(int health) {
+        this.health = health;
+    }
+    void setAttack(int attack){
+        this.attack = attack;
+    }
+    void setDefense(int defense){
+        this.defense = defense;
+    }
 
 //    Methods for retrieving player information.
     String getName() {
@@ -40,6 +52,18 @@ public class Player {
 
     int getAge() {
         return this.age;
+    }
+
+    int getAttack() {
+        return this.attack;
+    }
+
+    int getHealth() {
+        return this.health;
+    }
+
+    int getdefense() {
+        return this.defense;
     }
 
     String getColor() {
@@ -56,7 +80,13 @@ public class Player {
                 "\n Planet: " + this.planet +
                 "\n Age: " + this.age +
                 "\n Color: " + this.color +
+                "\n Attack: " + this.attack +
+                "\n Defense: " + this.defense +
                 "\n Time of Save: " + now;
+    }
+
+    public String toStats() {
+        return "Your Stats: HP= " + this.health + ", ATK= " + this.attack + ", DEF= " + this.defense;
     }
 
 }
