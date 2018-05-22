@@ -4,7 +4,7 @@ import com.gamedriver.java.utilities.InputHelper;
 
 public class Combat {
 
-    public void fight(Player player, Enemy enemy) {
+    public static void fight(Player player, Enemy enemy) {
 
         String playerChoice;
         char playChoice;
@@ -44,18 +44,17 @@ public class Combat {
                         chargeUp += player.getAttack() / 4 + 2;
                         System.out.println("Your attack charge is: " + chargeUp + "!");
                         break;
-                    case default:
+                    default :
                         System.out.println("That is an invalid input! Your indecisiveness leaves you open to attack!");
                         break;
-                }
+                }//end switch
+                }//enemy has health fight loop
                 //enemy attacks
                 if (enemy.getHealth() > 0) {
                     System.out.println("The " + enemy.getType() + " attacks!");
-                    
-                }
 
+                }//end enemy attack
 
-            }
-        }
-    }
-}
+        }//combat loop
+    }//end fight method
+}//end Combat class
