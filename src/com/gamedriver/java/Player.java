@@ -62,7 +62,7 @@ public class Player {
         return this.health;
     }
 
-    int getdefense() {
+    int getDefense() {
         return this.defense;
     }
 

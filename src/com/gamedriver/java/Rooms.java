@@ -27,6 +27,9 @@ public class Rooms {
 
     public void setDescription(String description) {
         this.description = description;
+        if (enemy.getHealth() > 0) {
+            System.out.println("A " + enemy.getType() + " approaches!");
+        }
     }
 
     public Enemy getEnemy() {

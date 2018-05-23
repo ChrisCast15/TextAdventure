@@ -8,14 +8,15 @@ public class Enemy {
     private int defense;
 
     /**
-     *
-     * @param type what kind of enemy do we have?
-     * @param health hit points, bring down to 0 to kill enemy
-     * @param attack how much damage will the enemy inflict
+     * @param type    what kind of enemy do we have?
+     * @param health  hit points, bring down to 0 to kill enemy
+     * @param attack  how much damage will the enemy inflict
      * @param defense damage dealt to enemy will be player's attack - enemy defense
      */
 
-    Enemy(String type, int health, int attack, int defense) {
+    public Enemy() { }
+
+    public Enemy(String type, int health, int attack, int defense) {
         this.type = type;
         this.health = health;
         this.attack = attack;
@@ -23,7 +24,7 @@ public class Enemy {
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public void setType(String type) {

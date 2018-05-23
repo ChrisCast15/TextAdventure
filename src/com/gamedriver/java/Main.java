@@ -17,14 +17,22 @@ import com.gamedriver.java.utilities.*;
 
 public class Main {
 
-    //      creates an instance of the Player Class
-    static Player player = new Player();
 
     public static void main(String[] args) {
+        Player player = new Player();
 
-        Combat.fight(player, new MartianSpider());
+        Rooms[][] room = new Rooms[4][4];
 
-        PuzzleRoom1.initiateRoom();
+        Rooms room00 = new Rooms("Empty room " +
+                "\nIt's really dark in here!", new MartianSpider(), "Say Hello", "Hello" );
+        room[0][0] = room00;
+
+        Rooms room01 = new Rooms("It's blindingly bright in here!", new Enemy("Rock Monster", 0, 7, 7), "What chemical causes Mar's red surface", "Iron");
+        room[0][1] = room01;
+
+        System.out.println(room[0][1].getDescription());
+        Combat.fight(player, room[0][1].getEnemy());
+        PuzzleRoom1.initiateRoom(room[0][1], player);
 
         Splash.printTitle();
 
