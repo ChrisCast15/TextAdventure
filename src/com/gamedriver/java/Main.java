@@ -27,16 +27,12 @@ public class Main {
                 "\nIt's really dark in here!", new MartianSpider(), "Say Hello", "Hello" );
         room[0][0] = room00;
 
-        Rooms room01 = new Rooms("It's blindingly bright in here!", new Enemy("Rock Monster", 0, 7, 7), "What chemical causes Mar's red surface", "Iron");
+        Rooms room01 = new Rooms("It's blindingly bright in here!", new Enemy("Rock Monster", 10, 7, 7), "What chemical causes Mar's red surface", "Iron");
         room[0][1] = room01;
-
-        System.out.println(room[0][1].getDescription());
-        Combat.fight(player, room[0][1].getEnemy());
-        PuzzleRoom1.initiateRoom(room[0][1], player);
 
         Splash.printTitle();
 
-        ReadTextFile.printLine("Story1.txt");
+        ReadTextFile.printLine("src/storytext/Story1.txt");
 
         //      Here is where we start getting the player's information
         player.setName(InputHelper.getInput("\"Hey there! Welcome to Olympus Mons Research base. What is your name?\"  "));
@@ -52,7 +48,11 @@ public class Main {
 
         System.out.println("\"Lucky you, I've got a " + player.getColor() + " labsuit here for you!\"  ");
 
-        ReadTextFile.printLine("Story2.txt");
+        ReadTextFile.printLine("src/storytext/Story2.txt");
+
+        System.out.println(room[0][1].getDescription());
+        Combat.fight(player, room[0][1].getEnemy());
+        PuzzleRoom1.initiateRoom(room[0][1], player);
 
 
 

@@ -17,8 +17,7 @@ public class SaveGame {
     public static void save(int fileNumber, Player player) {
 
 
-        String fileName = "SaveData" + fileNumber + ".txt";
-
+        String fileName = "src/storytext/SaveData" + fileNumber + ".txt";
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName))) {
 
             String content = player.toSave();
