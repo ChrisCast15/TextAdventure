@@ -1,0 +1,7 @@
+NAME: Jimmy
+ Planet: Earth
+ Age: 75
+ Color: Blue
+ Attack: 6
+ Defense: 3
+ Time of Save: Tue May 22 18:01:51 PDT 2018
