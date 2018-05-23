@@ -50,10 +50,69 @@ public class Main {
 
         ReadTextFile.printLine("src/storytext/Story2.txt");
 
-        System.out.println(room[0][1].getDescription());
-        Combat.fight(player, room[0][1].getEnemy());
-        PuzzleRoom1.initiateRoom(room[0][1], player);
+        boolean gameWon = false;
+        int x = 0;
+        int y = 0;
+        char direction;
+        boolean dirIsValid = false;
 
+        while (!gameWon && player.getHealth() > 0) {
+
+            dirIsValid = false;
+
+            System.out.println(room[x][y].getDescription());
+            Combat.fight(player, room[x][y].getEnemy());
+            if(player.getHealth() < 0){
+                break;
+            }
+            PuzzleRoom1.initiateRoom(room[x][y], player);
+
+            while(!dirIsValid) {
+                direction = InputHelper.getInput("Where do you want to go? (North, West, right, down...)").toLowerCase().charAt(0);
+
+                switch (direction) {
+                    case 'n':
+                        if (y == 0) {
+                            System.out.println("You cant go that way");
+                            break;
+                        } else {
+                            y--;
+                            dirIsValid = true;
+                            break;
+                        }
+                    case 'e':
+                        if (x == 3) {
+                            System.out.println("You cant go that way");
+                            break;
+                        } else {
+                            x++;
+                            dirIsValid = true;
+                            break;
+                    }case 's':
+                        if (y == 3) {
+                            System.out.println("You cant go that way");
+                            break;
+                        } else {
+                            y++;
+                            dirIsValid = true;
+                            break;
+                        }
+                    case 'w':
+                        if (x == 0) {
+                            System.out.println("You cant go that way");
+                            break;
+                        } else {
+                            x--;
+                            dirIsValid = true;
+                            break;
+                        }
+                    default:
+                        System.out.println("That is not a valid input!");
+                        break;
+                }// end switch
+            }//end get direction while loop
+
+        }
 
 
         SaveGame.save(1, player);

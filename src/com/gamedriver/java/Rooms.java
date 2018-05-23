@@ -1,7 +1,5 @@
 package com.gamedriver.java;
 
-import com.gamedriver.java.utilities.InputHelper;
-
 public class Rooms {
 
     private String description = "This is a dark room. As the beam of your flashlight glides over the" +
