@@ -1,7 +1,7 @@
-NAME: Jimmy
- Planet: Earth
- Age: 75
- Color: Blue
+NAME: gsda
+ Planet: dfgdfg
+ Age: 4
+ Color: asdfasdf
  Attack: 6
  Defense: 3
- Time of Save: Tue May 22 18:01:51 PDT 2018
+ Time of Save: Thu May 24 13:53:12 PDT 2018

@@ -1,6 +1,9 @@
 package com.gamedriver.java;
 
 import com.gamedriver.java.utilities.InputHelper;
+import com.gamedriver.java.utilities.RandomNumber;
+
+import java.util.Random;
 
 public class Combat {
 
@@ -29,7 +32,12 @@ public class Combat {
                         System.out.println("You attack the enemy " + enemy.getType() + "!");
                         netDamage = player.getAttack() + chargeUp - enemy.getDefense();
                         if (netDamage > 0) {
-                            enemy.setHealth(enemy.getHealth() - netDamage);
+                            System.out.println("You did " + netDamage + " points of damage!");
+                            if(netDamage <= enemy.getHealth()) {
+                                enemy.setHealth(enemy.getHealth() - netDamage);
+                            } else{
+                                enemy.setHealth(0);
+                            }
 
                         } else {
                             System.out.println("Your attack could not penetrate the enemy's defenses!" +
@@ -42,19 +50,35 @@ public class Combat {
                     case 'd':
                         System.out.println("You defend and charge up your attack!");
                         chargeUp += player.getAttack() / 4 + 2;
-                        System.out.println("Your attack charge is: " + chargeUp + "!");
+                        System.out.println("Your attack charged up " + chargeUp + " extra points!");
                         break;
                     default :
                         System.out.println("That is an invalid input! Your indecisiveness leaves you open to attack!");
                         break;
                 }//end switch
                 }//enemy has health fight loop
-                //enemy attacks
+                //enemy's turn
                 if (enemy.getHealth() > 0) {
                     System.out.println("The " + enemy.getType() + " attacks!");
+                    netDamage = enemy.getAttack() - player.getDefense() + RandomNumber.rNG(5, 0);
+                    if (netDamage <= 0) {
+                        System.out.println("The enemy " + enemy.getType() + "'s attack missed");
+                    } else{
+                        System.out.println("Enemy " + enemy.getType() + " lands a hit of " + netDamage + "!");
+                        if(netDamage <= player.getHealth()) {
+                            player.setHealth(player.getHealth() - netDamage);
+                        } else{
+                            player.setHealth(0);
+                            break;
+                        }
+                        System.out.println(player.toStats());
+                    }
+
                 } else {
                     System.out.println("You defeated the " + enemy.getType() + "!");//end enemy attack
                 }
+
+
 
         }//combat loop
     }//end fight method

@@ -50,6 +50,7 @@ public class Main {
 
         ReadTextFile.printLine("src/storytext/Story2.txt");
 
+        boolean playerAlive = true;
         boolean gameWon = false;
         int x = 0;
         int y = 0;
@@ -71,6 +72,7 @@ public class Main {
                 direction = InputHelper.getInput("Where do you want to go? (North, West, right, down...)").toLowerCase().charAt(0);
 
                 switch (direction) {
+                    case 'u':
                     case 'n':
                         if (y == 0) {
                             System.out.println("You cant go that way");
@@ -112,6 +114,9 @@ public class Main {
                 }// end switch
             }//end get direction while loop
 
+            if(!playerAlive){
+                break;
+            }
         }
 
 
