@@ -23,24 +23,23 @@ public class InputHelper {
      */
     public static int getInt(String prompt) {
 
-        int input;
-        try {
-            System.out.print(prompt);
-            Scanner scanner = new Scanner(System.in);
-            input = scanner.nextInt();
-            return input;
+        int input = 1;
+        boolean validInput = false;
+        while (!validInput) {
+            try {
+                System.out.print(prompt + "\n>");
+                Scanner scanner = new Scanner(System.in);
+                input = scanner.nextInt();
+                validInput = true;
+                return input;
 
-            /**
-             * when user's response is anything but an int,
-             * we will ask one more time
-             */
-        } catch (InputMismatchException e) {
-            System.out.println("Please input an integer!");
-
-            //asks again
-            System.out.println(prompt);
-            Scanner tryAgain = new Scanner(System.in);
-            input = tryAgain.nextInt();
+                /**
+                 * when user's response is anything but an int,
+                 * we will ask one more time
+                 */
+            } catch (InputMismatchException e) {
+                System.out.println("Please input an integer!");
+            }
         }
         return input;
     }

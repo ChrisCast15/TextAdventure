@@ -66,7 +66,11 @@ public class Main {
                 PuzzleRoom1.initiateRoom(room[x][y], player);
             }
             while(!dirIsValid && player.getHealth() > 0) {
-                direction = InputHelper.getInput("Where do you want to go? (North, West, right, down...)").toLowerCase().charAt(0);
+                try {
+                    direction = InputHelper.getInput("Where do you want to go? (North, West, right, down...)").toLowerCase().charAt(0);
+                } catch (StringIndexOutOfBoundsException e) {
+                    direction = 'h';
+                }
 
                 switch (direction) {
                     case 'u':

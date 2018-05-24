@@ -23,7 +23,11 @@ public class Combat {
             } else {
                 System.out.println("The " + enemy.getType() + " is getting ready to attack!");
                 System.out.println(enemy.toString());
-                playerChoice = InputHelper.getInput("What do you want to do? (Attack/Defend)").toLowerCase();
+                try {
+                    playerChoice = InputHelper.getInput("What do you want to do? (Attack/Defend)").toLowerCase();
+                } catch (StringIndexOutOfBoundsException e) {
+                    playerChoice = "invalid";
+                }
                 playChoice = playerChoice.charAt(0);
 
                 //player's turn
