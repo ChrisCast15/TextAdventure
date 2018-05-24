@@ -79,6 +79,7 @@ public class Main {
                             dirIsValid = true;
                             break;
                         }
+                    case 'r':
                     case 'e':
                         if (x == 3) {
                             System.out.println("You cant go that way");
@@ -86,8 +87,9 @@ public class Main {
                         } else {
                             x++;
                             dirIsValid = true;
-                            break;
-                    }case 's':
+                            break;}
+                    case 'd':
+                    case 's':
                         if (y == 3) {
                             System.out.println("You cant go that way");
                             break;
@@ -96,6 +98,7 @@ public class Main {
                             dirIsValid = true;
                             break;
                         }
+                    case 'l':
                     case 'w':
                         if (x == 0) {
                             System.out.println("You cant go that way");

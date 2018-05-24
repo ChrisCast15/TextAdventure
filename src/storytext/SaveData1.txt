@@ -1,7 +1,7 @@
-NAME: asdfasdf
- Planet: asdfasdf
- Age: 6
- Color: asdfasdf
+NAME: Hal
+ Planet: Earth
+ Age: 54
+ Color: Teak
  Attack: 5
  Defense: 3
- Time of Save: Thu May 24 14:53:09 PDT 2018
+ Time of Save: Thu May 24 15:25:19 PDT 2018

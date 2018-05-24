@@ -10,7 +10,7 @@ public class Player {
     private String planet;
     private int age;
     private String color;
-    private int health = 30;
+    private int health = 100;
     private int attack = 5;
     private int defense = 3;
 

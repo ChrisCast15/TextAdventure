@@ -6,20 +6,21 @@ import com.gamedriver.java.utilities.RandomNumber;
 public class PuzzleRoom1 {
 
     public static void initiateRoom(Rooms room, Player player){
-        System.out.println(
-                "In the corner, you spot the green glow of a sercurity \n" +
-                "terminal illuminating the wall. Logging in will unlock \n" +
-                "a safe deposit box in the room\n" +
-                "\n" +
-                "The hint is:" +
-                "\n");
-
+        if (!room.getPuzzleSolved()) {
+            System.out.println(
+                    "In the corner, you spot the green glow of a sercurity \n" +
+                            "terminal illuminating the wall. Logging in will unlock \n" +
+                            "a safe deposit box in the room\n" +
+                            "\n" +
+                            "The hint is:" +
+                            "\n");
+        }
         Quiz quiz = new Quiz();
 
         boolean roomChallengeComplete = false;
         int tries = 3;
 
-        while (!roomChallengeComplete && tries > 0){
+        while ((!roomChallengeComplete && tries > 0) && !room.getPuzzleSolved()){
             roomChallengeComplete = quiz.compareResponse(room.getQuizQ(), room.getQuizA());
 
             tries--;
@@ -44,6 +45,7 @@ public class PuzzleRoom1 {
                     "\nDefense +" + DEFHolder);
             System.out.println("Your new Stats:");
             System.out.println(player.toStats());
+            room.setPuzzleSolved(true);
 
         }
 

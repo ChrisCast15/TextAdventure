@@ -32,7 +32,7 @@ public class Combat {
                         System.out.println("You attack the enemy " + enemy.getType() + "!");
                         netDamage = player.getAttack() + chargeUp - enemy.getDefense();
                         if (netDamage > 0) {
-                            System.out.println("You did " + netDamage + " points of damage!");
+                            System.out.println("You did " + netDamage + " points of damage!\n");
                             if(netDamage <= enemy.getHealth()) {
                                 enemy.setHealth(enemy.getHealth() - netDamage);
                             } else{
@@ -41,7 +41,7 @@ public class Combat {
 
                         } else {
                             System.out.println("Your attack could not penetrate the enemy's defenses!" +
-                                    "\nTry defending to charge up your attack!");
+                                    "\nTry defending to charge up your attack!\n");
                         }
                         chargeUp = 0;
                         System.out.println(enemy.toString());
@@ -53,7 +53,7 @@ public class Combat {
                         System.out.println("Your attack charged up " + chargeUp + " extra points!");
                         break;
                     default :
-                        System.out.println("That is an invalid input! Your indecisiveness leaves you open to attack!");
+                        System.out.println("That is an invalid input! Your indecisiveness leaves you open to attack!\n");
                         break;
                 }//end switch
                 }//enemy has health fight loop

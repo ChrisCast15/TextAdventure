@@ -7,6 +7,7 @@ public class Rooms {
     private Enemy enemy = new MartianSpider();
     private String quizQ = "Which of Mar's moons has the closest orbit?";
     private String quizA = "phobos";
+    private boolean puzzleSolved = false;
 
 
     public Rooms() {
@@ -17,6 +18,7 @@ public class Rooms {
         this.enemy = enemy;
         this.quizQ = quizQ;
         this.quizA = quizA;
+        this.puzzleSolved = false;
     }
 
     public String getDescription() {
@@ -52,5 +54,13 @@ public class Rooms {
 
     public void setQuizA(String quizA) {
         this.quizA = quizA;
+    }
+
+    public boolean getPuzzleSolved() {
+        return puzzleSolved;
+    }
+
+    public void setPuzzleSolved(boolean puzzleSolved) {
+        this.puzzleSolved = puzzleSolved;
     }
 }
