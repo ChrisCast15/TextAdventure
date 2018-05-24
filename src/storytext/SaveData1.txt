@@ -1,7 +1,7 @@
-NAME: gsda
- Planet: dfgdfg
- Age: 4
+NAME: asdfasdf
+ Planet: asdfasdf
+ Age: 6
  Color: asdfasdf
- Attack: 6
+ Attack: 5
  Defense: 3
- Time of Save: Thu May 24 13:53:12 PDT 2018
+ Time of Save: Thu May 24 14:53:09 PDT 2018

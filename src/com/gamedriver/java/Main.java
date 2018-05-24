@@ -50,7 +50,6 @@ public class Main {
 
         ReadTextFile.printLine("src/storytext/Story2.txt");
 
-        boolean playerAlive = true;
         boolean gameWon = false;
         int x = 0;
         int y = 0;
@@ -63,12 +62,10 @@ public class Main {
 
             System.out.println(room[x][y].getDescription());
             Combat.fight(player, room[x][y].getEnemy());
-            if(player.getHealth() < 0){
-                break;
+            if (player.getHealth() > 0) {
+                PuzzleRoom1.initiateRoom(room[x][y], player);
             }
-            PuzzleRoom1.initiateRoom(room[x][y], player);
-
-            while(!dirIsValid) {
+            while(!dirIsValid && player.getHealth() > 0) {
                 direction = InputHelper.getInput("Where do you want to go? (North, West, right, down...)").toLowerCase().charAt(0);
 
                 switch (direction) {
@@ -114,9 +111,6 @@ public class Main {
                 }// end switch
             }//end get direction while loop
 
-            if(!playerAlive){
-                break;
-            }
         }
 
 
