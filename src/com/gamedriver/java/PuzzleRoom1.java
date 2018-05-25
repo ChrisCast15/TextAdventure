@@ -8,7 +8,7 @@ public class PuzzleRoom1 {
     public static void initiateRoom(Rooms room, Player player){
         if (!room.getPuzzleSolved()) {
             System.out.println(
-                    "In the corner, you spot the green glow of a sercurity \n" +
+                    "In the corner, you spot the green glow of a security \n" +
                             "terminal illuminating the wall. Logging in will unlock \n" +
                             "a safe deposit box in the room\n" +
                             "\n" +
@@ -34,8 +34,8 @@ public class PuzzleRoom1 {
         }
         if(roomChallengeComplete){
             int HPHolder = RandomNumber.rNG(10, 1);
-            int ATKHolder = RandomNumber.rNG(2, 0);
-            int DEFHolder = RandomNumber.rNG(2, 0);
+            int ATKHolder = RandomNumber.rNG(3, 0);
+            int DEFHolder = RandomNumber.rNG(3, 0);
             player.setHealth(player.getHealth() + HPHolder);
             player.setAttack(player.getAttack() + ATKHolder);
             player.setDefense(player.getDefense() + DEFHolder);
