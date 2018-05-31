@@ -1,0 +1,7 @@
+NAME: Chris
+ Planet: Eart
+ Age: 15
+ Color: Blue
+ Attack: 5
+ Defense: 3
+ Time of Save: Thu May 31 13:13:27 PDT 2018

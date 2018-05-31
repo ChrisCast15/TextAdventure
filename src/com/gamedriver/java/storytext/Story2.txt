@@ -1,0 +1,9 @@
+The Receptionist now leads you to your quarters. 
+
+Along the way, the facility starts to tremble and the lights flicker.
+
+A robotic voice across the PA says "evacuate".
+Outside the window, you can see the cause of the Marsquake.
+A drilling machine has malfunctioned and drilled to deep.
+From the hole, Martian animals scramble. It seems the drill shaft
+has penetrated their underground nest, and they aren't happy...
