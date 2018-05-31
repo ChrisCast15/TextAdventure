@@ -120,6 +120,16 @@ public class Main {
                 "A sign says \"ESCAPE POD IMMEDIATELY SOUTH EAST OF HERE\".", new MartianSpiderQueen(), "Most abundant molecule in the Martian atmosphere.", "Carbon dioxide");
         room[2][2] = room22;
 
+        Rooms room33 = new Rooms("You made it to the Escape Pod Room!\n" +
+                "The receptionist who greeted you is waiting in the Escape Pod, eagerly opening\n" +
+                "the hatch for you to climb inside. \n" +
+                "\"I've been waiting for you. I've got the coordinates set\"\n" +
+                "3\n" +
+                "2\n" +
+                "1\n" +
+                "You look outside, the facility shrouded in pink dust collapses.", new NoEnemy(), "test", "test");
+        room[3][3] = room33;
+
 //
 
 
@@ -151,14 +161,17 @@ public class Main {
 
         while (!gameWon && player.getHealth() > 0) {
 
+            if (x == 3 && y == 3) {
+                gameWon = true;
+            }
             dirIsValid = false;
 
             System.out.println(room[x][y].getDescription());
             Combat.fight(player, room[x][y].getEnemy());
-            if (player.getHealth() > 0) {
+            if (player.getHealth() > 0 && !gameWon) {
                 PuzzleRoom1.initiateRoom(room[x][y], player);
             }
-            while(!dirIsValid && player.getHealth() > 0) {
+            while((!dirIsValid && player.getHealth() > 0) && !gameWon) {
                 try {
                     direction = InputHelper.getInput("Where do you want to go? (North, West, right, down...)").toLowerCase().charAt(0);
                 } catch (StringIndexOutOfBoundsException e) {
