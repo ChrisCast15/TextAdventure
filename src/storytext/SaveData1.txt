@@ -1,7 +1,7 @@
-NAME: Hal
- Planet: Earth
- Age: 54
- Color: Teak
- Attack: 5
- Defense: 3
- Time of Save: Thu May 24 15:25:19 PDT 2018
+NAME: Dani
+ Planet: Uranus
+ Age: 69
+ Color: Camoflage
+ Attack: 13
+ Defense: 11
+ Time of Save: Wed May 30 12:25:12 PDT 2018

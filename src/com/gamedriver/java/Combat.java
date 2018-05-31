@@ -25,10 +25,10 @@ public class Combat {
                 System.out.println(enemy.toString());
                 try {
                     playerChoice = InputHelper.getInput("What do you want to do? (Attack/Defend)").toLowerCase();
+                    playChoice = playerChoice.charAt(0);
                 } catch (StringIndexOutOfBoundsException e) {
-                    playerChoice = "invalid";
+                    playChoice = 'i';
                 }
-                playChoice = playerChoice.charAt(0);
 
                 //player's turn
                 switch (playChoice) {

@@ -23,8 +23,10 @@ public class Main {
 
         Rooms[][] room = new Rooms[4][4];
 
-        Rooms room00 = new Rooms("The Dormitory \nThe Sleeping-pods in this room have been strewn by the Marsquake. Blankets are thrown on the floor" +
-                "and a bookshelf is toppled over. In the corner, you can see a tunnel dug up by a Martian Spider.", new MartianSpider(), "Name of the Mars Rover launched in 2011 AD, may have killed a cat.", "Curiosity" );
+        Rooms room00 = new Rooms("The Dormitory \nThe Sleeping-pods in this room have been strewn by the Marsquake.\n" +
+                " Blankets are thrown on the floor\n" +
+                "and a bookshelf is toppled over. In the corner, you can see a tunnel \n" +
+                "dug up by a Martian Spider.", new MartianSpider(), "Name of the Mars Rover launched in 2011 AD, may have killed a cat.", "Curiosity" );
         room[0][0] = room00;
 
         Rooms room01 = new Rooms("This is the Sahara Room\n" +
@@ -34,7 +36,7 @@ public class Main {
 
         Rooms room10 = new Rooms("The Garden\n" +
                 "This room provides a welcoming environment for residents from Earth's tropical\n" +
-                "tropical climate. Many exotic plants here have adapted to the iron rich \n" +
+                "climate. Many exotic plants here have adapted to the iron rich \n" +
                 "Martian soil.", new SteelVenusFlyTrap(), "How many moons does Mars have?", "Two");
         room[1][0] = room10;
 
@@ -64,7 +66,8 @@ public class Main {
         Rooms room03 = new Rooms("Escape Pod Launch Bay\n" +
                 "You give a sigh of relief when you enter the room. But relief turns to panic\n" +
                 "as you see the last escape pod is occupied by a Face-Cuddler\n" +
-                "tightly clamped to the head of a Interplanetary Corps Scientist.", new NoEnemy(), "What is the Greek counterpart of Jupiter's namesake?", "Zeus");
+                "tightly clamped to the head of a Interplanetary Corps Scientist.\n" +
+                "A sign reads: MORE ESCAPE PODS IN SOUTH EAST CORNER.", new NoEnemy(), "What is the Greek counterpart of Jupiter's namesake?", "Zeus");
         room[0][3] = room03;
 
         Rooms room13 = new Rooms("Xenobiology Laboratory\n" +
@@ -98,8 +101,8 @@ public class Main {
 
         Rooms room23 = new Rooms("Zoo\n" +
                 "This Facility houses the successful products of the Xenobiology Laboratory.\n" +
-                "The hybrid animals are given small pens and with their cages in disarray, they\n" +
-                "are allowed to let their insticts take over. You can see the ripped clothes of\n" +
+                "The hybrid animals are given small pens, but now with their cages in disarray, they\n" +
+                "are allowed to let their instincts take over. You can see the ripped clothes of\n" +
                 "the investors that were touring the campus. ", new SpecimenIronAnklyosaurus(), "What does \"Anklyosaurs\" mean?", "Fused Lizard");
         room[2][3] = room23;
 
@@ -115,6 +118,7 @@ public class Main {
                 "planet. A large eight legged organism crawls out of a large hole in the\n" +
                 "center of the room.\n\n" +
                 "A sign says \"ESCAPE POD IMMEDIATELY SOUTH EAST OF HERE\".", new MartianSpiderQueen(), "Most abundant molecule in the Martian atmosphere.", "Carbon dioxide");
+        room[2][2] = room22;
 
 //
 
